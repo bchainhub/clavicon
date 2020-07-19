@@ -1,0 +1,21 @@
+{
+  "name": "@cryptohub/clavicon",
+  "version": "0.1.0",
+  "description": "A tiny library for generating stripes identicons.",
+  "main": "./dist/clavicon.js",
+  "scripts": {
+    "preinstall": "npm install --global rollup",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup ./src/clavicon.js --output.format umd --name 'clavicon' --output.file ./dist/clavicon.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cryptohub-digital/clavicon.git"
+  },
+  "author": "CRYPTO ▪ HUB®",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/cryptohub-digital/clavicon/issues"
+  },
+  "homepage": "https://github.com/cryptohub-digital/clavicon#readme"
+}
