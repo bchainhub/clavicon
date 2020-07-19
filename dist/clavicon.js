@@ -4,22 +4,22 @@
   (global = global || self, factory(global.clavicon = {}));
 }(this, (function (exports) { 'use strict';
 
-  function clavicon(address) {
+  function create(address) {
     const addr = address.toUpperCase();
-    const arraddr = addr.split("").reverse();
-    const arrlength = arraddr.length;
-    for (var i = arrlength; i < 6; i-6) {
-      var chunks = [].concat(arraddr[i-5], arraddr[i-4], arraddr[i-3], arraddr[i-2], arraddr[i-1], arraddr[i]);
+    const stop = addr.length;
+    const start = stop % 6;
+    let chunks = [];
+    for (var i = start; i < stop; i = i+6) {
+      chunks.push(addr.slice(i, i+6));
     }
-    const colors = chunks.reverse();
-    const prefix = addr.slice(0, arrlength % 6);
-    const stripes = colors.map(color => {
-      return '<span style="background:#{color}" />'
+    const prefix = addr.slice(0, start);
+    const stripes = chunks.map(color => {
+      return `<span style="background:#${color}">&nbsp;</span>`
     });
-    return '<var class="clavicon">' + prefix + stripes + '</var>';
+    return '<var class="clavicon">' + prefix + stripes.join('') + '</var>';
   }
 
-  exports.clavicon = clavicon;
+  exports.create = create;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 

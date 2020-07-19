@@ -2,8 +2,14 @@
 <head>
 <meta charset="utf-8">
 <style>
+var.clavicon {
+  font-size: 1.3em;
+}
 var.clavicon > span {
   width: 1em;
+}
+var.clavicon > span:first-of-type {
+  margin-left: 0.2em;
 }
 </style>
 </head>
@@ -15,10 +21,13 @@ let addresses = [
   "CB661234567890ABCDEF1234567890ABCDEF12345678",
   "cb10abcdefabcdefabcdefabcdefabcdefabcdefabcd",
   "AB841234567890ABCDEF1234567890ABCDEF12345678",
-  "CE571234567890ABCDEF1234567890ABCDEF12345678"
+  "CE571234567890ABCDEF1234567890ABCDEF12345678",
+  "XCE571234567890ABCDEF1234567890ABCDEF12345678",
+  "xAB841234567890ABCDEF1234567890ABCDEF12345678",
+  "AB841234Gx7890ABCDEF1234567890ABCDEF12345678"
 ];
 addresses.forEach(function(address) {
-  document.write("<pre>" + clavicon(address) + "</pre>");
+  document.write("<pre>" + clavicon.create(address) + "</pre>");
 });
 </script>
 </body>
