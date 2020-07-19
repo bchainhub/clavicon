@@ -17,7 +17,7 @@ yarn build
 ```js
 import 'clavicon';
 
-document.write("<pre>" + clavicon(address) + "</pre>");
+document.write("<pre>" + clavicon.create(address) + "</pre>");
 ```
 
 ## CDN
