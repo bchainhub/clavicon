@@ -2,6 +2,8 @@
 
 A tiny library for generating stripes identicons.
 
+![Sample clavicon image](examples/clavicon-screen.png "Clavicon")
+
 ## Installation
 
 [Rollup](https://rollupjs.org) is used to deliver JS file.
