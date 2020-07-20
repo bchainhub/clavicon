@@ -2,7 +2,7 @@
 
 A tiny library for generating stripes identicons.
 
-![Sample clavicon image](examples/clavicon-screen.png "Clavicon")
+![Sample clavicon image](example/clavicon-screen.png "Clavicon")
 
 ## Installation
 
