@@ -39,4 +39,4 @@ Please make sure to update the tests as appropriate.
 
 ## License
 
-[WTFPL](LICENSE)
+[CORE License](LICENSE)
